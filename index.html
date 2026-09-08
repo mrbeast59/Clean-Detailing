@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clean Detailing | Mobile Car Detailing in Chagrin Falls, OH</title>
+<meta name="description" content="Clean Detailing is a mobile interior and exterior car detailing service based in Chagrin Falls, Ohio. We come to your driveway with everything needed for a hand wash, ceramic protection, and a full interior clean.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Work+Sans:wght@400;500;600&display=swap');
+
+  :root{
+    --ink:#12181F;
+    --ink-2:#1B232C;
+    --paper:#F4F6F7;
+    --paper-2:#E7ECEE;
+    --blue:#3D8BE0;
+    --yellow:#F2B93E;
+    --line-dark: rgba(244,246,247,0.14);
+    --line-light: rgba(18,24,31,0.12);
+    --radius: 6px;
+    --maxw: 1120px;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{ display:block; max-width:100%; }
+  a{ color:inherit; }
+  h1,h2,h3{
+    font-family:'Big Shoulders Display', sans-serif;
+    font-weight:800;
+    line-height:1.03;
+    margin:0;
+  }
+  p{ margin:0; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 28px; }
+  section{ padding:clamp(48px,7vw,96px) 0; }
+
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--blue);
+    outline-offset:3px;
+  }
+
+  /* nav */
+  .nav{
+    position:sticky; top:0; z-index:20;
+    background:rgba(18,24,31,0.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line-dark);
+  }
+  .nav .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:16px; padding-bottom:16px;
+  }
+  .brand{
+    display:flex; align-items:center; gap:8px;
+    font-family:'Big Shoulders Display', sans-serif;
+    font-weight:700; font-size:1.35rem; color:var(--paper);
+    text-decoration:none;
+  }
+  .brand svg{ width:20px; height:20px; color:var(--blue); }
+  .nav-cta{
+    background:var(--yellow); color:var(--ink);
+    font-weight:600; font-size:0.95rem;
+    padding:10px 20px; border-radius:var(--radius);
+    text-decoration:none;
+    transition:transform 0.15s ease, background 0.15s ease;
+  }
+  .nav-cta:hover{ background:#F7C766; transform:translateY(-1px); }
+
+  /* hero */
+  .hero{
+    background:var(--ink); color:var(--paper);
+    padding-top:clamp(56px,8vw,110px);
+    padding-bottom:clamp(56px,8vw,110px);
+  }
+  .hero .wrap{
+    display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:center;
+  }
+  .hero h1{
+    font-size:clamp(2.4rem,4.6vw,3.6rem);
+    max-width:15ch;
+  }
+  .hero p.lede{
+    margin-top:22px; max-width:46ch;
+    color:rgba(244,246,247,0.78);
+    font-size:1.08rem;
+  }
+  .cta-row{
+    margin-top:32px; display:flex; align-items:center; gap:22px; flex-wrap:wrap;
+  }
+  .btn-primary{
+    background:var(--yellow); color:var(--ink);
+    font-weight:600; font-size:1rem;
+    padding:14px 28px; border-radius:var(--radius);
+    text-decoration:none; display:inline-block;
+    transition:transform 0.15s ease, background 0.15s ease;
+  }
+  .btn-primary:hover{ background:#F7C766; transform:translateY(-1px); }
+  .link-quiet{
+    color:var(--paper); text-decoration:underline;
+    text-underline-offset:4px; text-decoration-color:rgba(244,246,247,0.4);
+    font-weight:500;
+  }
+  .link-quiet:hover{ text-decoration-color:var(--paper); }
+
+  .bead-panel{ width:100%; height:auto; border-radius:20px; }
+  .sheen{
+    transform-box:fill-box; transform-origin:center;
+    transform:translateX(-40px) rotate(18deg);
+    animation:sweep 2.4s cubic-bezier(.4,0,.2,1) 0.5s 1 forwards;
+  }
+  @keyframes sweep{ to{ transform:translateX(760px) rotate(18deg); } }
+  @media (prefers-reduced-motion:reduce){
+    .sheen{ animation:none; opacity:0; }
+  }
+
+  /* about */
+  .about{ background:var(--paper); }
+  .about h2{ font-size:clamp(1.6rem,3vw,2.15rem); max-width:16ch; }
+  .about > .wrap > p{
+    margin-top:16px; max-width:62ch; font-size:1.08rem; color:rgba(18,24,31,0.8);
+  }
+  .highlights{
+    margin-top:44px;
+    display:grid; grid-template-columns:repeat(3,1fr); gap:32px;
+  }
+  .highlight{ border-left:3px solid var(--blue); padding-left:18px; }
+  .highlight h3{
+    font-family:'Work Sans', sans-serif; font-size:1.1rem; font-weight:600; margin-bottom:8px;
+  }
+  .highlight p{ color:rgba(18,24,31,0.68); font-size:0.96rem; }
+
+  /* services */
+  .services{ background:var(--paper-2); }
+  .services h2, .how h2, .area h2, .contact h2{ font-size:clamp(1.6rem,3vw,2.15rem); }
+  .section-lede{ margin-top:12px; max-width:58ch; color:rgba(18,24,31,0.7); }
+  .contact .section-lede{ color:rgba(244,246,247,0.72); }
+
+  .plans{ margin-top:40px; display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  .plan{
+    background:var(--paper); border:1px solid var(--line-light);
+    border-radius:var(--radius); padding:28px; display:flex; flex-direction:column;
+  }
+  .plan.featured{ background:var(--ink-2); border-color:var(--ink-2); color:var(--paper); }
+  .plan .tag{ display:inline-block; font-size:0.8rem; font-weight:600; color:var(--blue); margin-bottom:10px; }
+  .plan.featured .tag{ color:var(--yellow); }
+  .plan h3{ font-family:'Work Sans', sans-serif; font-size:1.25rem; font-weight:600; }
+  .plan .price{
+    font-family:'Big Shoulders Display', sans-serif;
+    font-size:2.3rem; font-weight:800; margin:8px 0 14px;
+  }
+  .plan p.desc{ color:rgba(18,24,31,0.68); font-size:0.95rem; margin-bottom:18px; }
+  .plan.featured p.desc{ color:rgba(244,246,247,0.75); }
+  .plan ul{ list-style:none; margin:0 0 24px; padding:0; flex-grow:1; }
+  .plan li{ display:flex; gap:10px; align-items:flex-start; font-size:0.94rem; margin-bottom:10px; }
+  .plan li svg{ flex-shrink:0; margin-top:3px; width:16px; height:16px; color:var(--blue); }
+  .plan.featured li svg{ color:var(--yellow); }
+  .plan-btn{
+    display:inline-block; width:100%; text-align:center; box-sizing:border-box;
+    padding:12px; border-radius:var(--radius);
+    background:var(--ink); color:var(--paper);
+    font-weight:600; text-decoration:none; font-size:0.95rem;
+    transition:background 0.15s ease;
+  }
+  .plan.featured .plan-btn{ background:var(--yellow); color:var(--ink); }
+  .plan-btn:hover{ background:#2a333d; }
+  .plan.featured .plan-btn:hover{ background:#F7C766; }
+  .plans-note{ margin-top:24px; font-size:0.92rem; color:rgba(18,24,31,0.62); }
+
+  /* how it works */
+  .how{ background:var(--paper); }
+  .steps{ margin-top:44px; display:grid; grid-template-columns:repeat(3,1fr); gap:36px; }
+  .step .num{
+    font-family:'Big Shoulders Display', sans-serif;
+    font-size:2.3rem; font-weight:800; color:var(--blue); line-height:1;
+  }
+  .step h3{ font-family:'Work Sans', sans-serif; font-size:1.08rem; font-weight:600; margin-top:10px; }
+  .step p{ margin-top:8px; color:rgba(18,24,31,0.68); font-size:0.95rem; }
+
+  /* service area */
+  .area{ background:var(--paper-2); }
+  .chips{ margin-top:28px; display:flex; flex-wrap:wrap; gap:12px; }
+  .chip{ border:1px solid var(--line-light); border-radius:999px; padding:8px 18px; font-size:0.92rem; font-weight:500; }
+
+  /* contact */
+  .contact{ background:var(--ink); color:var(--paper); }
+  .contact-grid{ margin-top:36px; display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  .contact-chip{ border:1px dashed rgba(244,246,247,0.35); border-radius:var(--radius); padding:18px; }
+  .contact-chip .label{ font-size:0.85rem; color:rgba(244,246,247,0.55); margin-bottom:6px; }
+  .contact-chip .value{ font-size:1.05rem; font-weight:600; font-style:italic; color:rgba(244,246,247,0.85); }
+  .edit-note{
+    margin-top:28px; border:1px dashed rgba(244,246,247,0.3); border-radius:var(--radius);
+    padding:16px 20px; font-size:0.9rem; color:rgba(244,246,247,0.6);
+  }
+
+  footer{
+    background:var(--ink); color:rgba(244,246,247,0.5);
+    padding:28px 0; font-size:0.88rem; border-top:1px solid var(--line-dark);
+  }
+  footer .wrap{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; }
+
+  @media (max-width:860px){
+    .hero .wrap{ grid-template-columns:1fr; }
+    .hero .visual{ order:-1; max-width:420px; margin:0 auto; }
+    .highlights, .plans, .steps, .contact-grid{ grid-template-columns:1fr; }
+  }
+  @media (max-width:520px){
+    .nav-cta{ padding:8px 14px; font-size:0.88rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C12 2 5 11 5 15.5C5 19.09 8.13 22 12 22C15.87 22 19 19.09 19 15.5C19 11 12 2 12 2Z"/></svg>
+      Clean Detailing
+    </a>
+    <a class="nav-cta" href="#contact">Book now</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>A hand wash and ceramic shine, right in your driveway.</h1>
+        <p class="lede">Clean Detailing is a mobile interior and exterior detail service based in Chagrin Falls, Ohio. We bring the water, soap, and tools — no drop-off, no shop, just your driveway.</p>
+        <div class="cta-row">
+          <a class="btn-primary" href="#contact">Book a detail</a>
+          <a class="link-quiet" href="#pricing">See pricing</a>
+        </div>
+      </div>
+      <div class="visual">
+        <svg class="bead-panel" viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of water beading on a ceramic-coated surface">
+          <defs>
+            <linearGradient id="panelGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#1B232C"/>
+              <stop offset="100%" stop-color="#0C1016"/>
+            </linearGradient>
+            <linearGradient id="sheenGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="rgba(255,255,255,0)"/>
+              <stop offset="50%" stop-color="rgba(255,255,255,0.16)"/>
+              <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+            </linearGradient>
+            <radialGradient id="beadGrad" cx="35%" cy="28%" r="72%">
+              <stop offset="0%" stop-color="#9FD0FF"/>
+              <stop offset="45%" stop-color="#3D8BE0"/>
+              <stop offset="100%" stop-color="#1E4A82"/>
+            </radialGradient>
+            <clipPath id="panelClip">
+              <rect x="0" y="0" width="520" height="420" rx="20"/>
+            </clipPath>
+          </defs>
+
+          <g clip-path="url(#panelClip)">
+            <rect x="0" y="0" width="520" height="420" fill="url(#panelGrad)"/>
+
+            <circle cx="72" cy="70" r="18" fill="url(#beadGrad)"/>
+            <circle cx="130" cy="140" r="10" fill="url(#beadGrad)" opacity="0.9"/>
+            <circle cx="205" cy="58" r="13" fill="url(#beadGrad)" opacity="0.85"/>
+            <circle cx="266" cy="128" r="22" fill="url(#beadGrad)"/>
+            <circle cx="336" cy="66" r="9" fill="url(#beadGrad)" opacity="0.8"/>
+            <circle cx="392" cy="150" r="15" fill="url(#beadGrad)" opacity="0.9"/>
+            <circle cx="446" cy="88" r="11" fill="url(#beadGrad)" opacity="0.85"/>
+            <circle cx="60" cy="182" r="7" fill="url(#beadGrad)" opacity="0.75"/>
+            <circle cx="104" cy="224" r="14" fill="url(#beadGrad)" opacity="0.9"/>
+            <circle cx="184" cy="252" r="20" fill="url(#beadGrad)"/>
+            <circle cx="252" cy="210" r="8" fill="url(#beadGrad)" opacity="0.8"/>
+            <circle cx="322" cy="262" r="16" fill="url(#beadGrad)" opacity="0.9"/>
+            <circle cx="402" cy="228" r="12" fill="url(#beadGrad)" opacity="0.85"/>
+            <circle cx="152" cy="322" r="10" fill="url(#beadGrad)" opacity="0.8"/>
+            <circle cx="232" cy="344" r="15" fill="url(#beadGrad)" opacity="0.9"/>
+            <circle cx="312" cy="330" r="9" fill="url(#beadGrad)" opacity="0.8"/>
+            <circle cx="392" cy="312" r="13" fill="url(#beadGrad)" opacity="0.85"/>
+            <circle cx="452" cy="300" r="8" fill="url(#beadGrad)" opacity="0.75"/>
+
+            <rect class="sheen" x="-260" y="-80" width="200" height="580" fill="url(#sheenGrad)"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="wrap">
+      <h2>Careful by default.</h2>
+      <p>Every visit starts with a full foam pre-soak and a hand wash — never a drive-through brush. Exterior washes finish with a ceramic sealant that beads water and helps protect your paint, and interiors get cleaned by hand, from the dash down to the cupholders.</p>
+      <div class="highlights">
+        <div class="highlight">
+          <h3>Hand-washed, not machine-brushed</h3>
+          <p>A foam pre-soak loosens dirt first, so the wash mitt never has to grind grit into your paint.</p>
+        </div>
+        <div class="highlight">
+          <h3>Ceramic protection included</h3>
+          <p>Every exterior wash finishes with a ceramic sealant that beads water and helps the shine last.</p>
+        </div>
+        <div class="highlight">
+          <h3>We bring everything</h3>
+          <p>Vacuum, soaps, towels, and tools all come with us. You just need a driveway and a hose.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="pricing">
+    <div class="wrap">
+      <h2>Services and pricing</h2>
+      <p class="section-lede">Pick interior, exterior, or both. Prices below are for a standard car.</p>
+      <div class="plans">
+
+        <div class="plan">
+          <span class="tag">Exterior</span>
+          <h3>Wash &amp; Shine</h3>
+          <div class="price">$65</div>
+          <p class="desc">A full exterior hand wash with ceramic protection and a streak-free shine.</p>
+          <ul>
+            <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Foam pre-soak &amp; hand wash</li>
+            <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Wheel &amp; tire clean</li>
+            <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Ceramic glass coating</li>
+            <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Wax &amp; sealant finish</li>
+          </ul>
+          <a class="plan-btn" href="#contact">Book this service</a>
+        </div>
+
+        <div class="plan">
+          <span class="tag">Interior</span>
+          <h3>Deep Clean</h3>
+          <div class="price">$65</div>
+          <p class="desc">A full interior refresh, top to bottom, inside every crevice.</p>
+          <ul>
+            <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Full vacuum</li>
+            <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Vent, seam &amp; cupholder detailing</li>
+            <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>All-surface wipe-down</li>
+            <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Fabric protectant</li>
+          </ul>
+          <a class="plan-btn" href="#contact">Book this service</a>
+        </div>
+
+        <div class="plan featured">
+          <span class="tag">Save $20</span>
+          <h3>Full Detail</h3>
+          <div class="price">$110</div>
+          <p class="desc">Everything above, inside and out, in one visit.</p>
+          <ul>
+            <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in Wash &amp; Shine</li>
+            <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in Deep Clean</li>
+            <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>One visit, one price</li>
+          </ul>
+          <a class="plan-btn" href="#contact">Book this service</a>
+        </div>
+
+      </div>
+      <p class="plans-note">SUVs, trucks, and minivans: add $10. Heavy pet hair or a first clean in a while? Just mention it when you book.</p>
+    </div>
+  </section>
+
+  <section class="how">
+    <div class="wrap">
+      <h2>How booking works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <h3>Reach out</h3>
+          <p>Message to pick a service and a time that works for you.</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h3>We come to you</h3>
+          <p>Just need a driveway and access to a hose — we bring everything else.</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h3>Drive off clean</h3>
+          <p>Sit back while we detail your car right where it's parked.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="area">
+    <div class="wrap">
+      <h2>Where we serve</h2>
+      <p class="section-lede">Based in Chagrin Falls and currently booking within about 10 miles, including:</p>
+      <div class="chips">
+        <span class="chip">Chagrin Falls</span>
+        <span class="chip">Bainbridge</span>
+        <span class="chip">Moreland Hills</span>
+        <span class="chip">Russell Township</span>
+        <span class="chip">Solon</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>Get in touch</h2>
+      <p class="section-lede">Message to pick a service and a time — we'll work around your schedule. Let us know which service you'd like when you reach out.</p>
+      <div class="contact-grid">
+        <div class="contact-chip">
+          <div class="label">Call or text</div>
+          <div class="value">Add your phone number</div>
+        </div>
+        <div class="contact-chip">
+          <div class="label">Instagram</div>
+          <div class="value">Add your handle</div>
+        </div>
+        <div class="contact-chip">
+          <div class="label">Email</div>
+          <div class="value">Add your email</div>
+        </div>
+      </div>
+      <div class="edit-note">Note to Clean Detailing: swap the placeholders above for your real contact details before sharing this page.</div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Clean Detailing</span>
+    <span>Based in Chagrin Falls, Ohio.</span>
+  </div>
+</footer>
+
+</body>
+</html>
