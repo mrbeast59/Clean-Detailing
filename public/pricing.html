@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing &amp; What's Included | Clean Detailing</title>
+<meta name="description" content="Mobile car detailing prices in Chagrin Falls, Ohio. Wash &amp; Shine, Deep Clean, and Full Detail, priced by vehicle size, with every inclusion listed.">
+<meta name="theme-color" content="#0F151B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230F151B'/%3E%3Cpath d='M12 4C12 4 6.5 10.2 6.5 13.6a5.5 5.5 0 0 0 11 0C17.5 10.2 12 4 12 4Z' fill='%232F7FD4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+  (function () {
+    var theme = 'light';
+    try {
+      var saved = localStorage.getItem('cd-theme');
+      if (saved === 'dark' || saved === 'light') {
+        theme = saved;
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        theme = 'dark';
+      }
+    } catch (e) {}
+    document.documentElement.setAttribute('data-theme', theme);
+    document.documentElement.classList.add('js');
+  })();
+</script>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .sr-only{
+    position:absolute; width:1px; height:1px;
+    padding:0; margin:0; overflow:hidden;
+    clip-path:inset(50%); white-space:nowrap; border:0;
+  }
+
+  .back{
+    display:flex; width:fit-content; align-items:center; gap:8px;
+    font-size:.85rem; font-weight:500;
+    color:rgba(246,248,249,.62);
+    text-decoration:none;
+    margin-bottom:24px;
+    transition:color .25s ease;
+  }
+  .back:hover{ color:var(--paper-fixed); }
+
+  /* ---------- page head ---------- */
+
+  .page-head{
+    position:relative; overflow:hidden;
+    color:var(--paper-fixed);
+    padding:clamp(40px,5vw,64px) 0 clamp(48px,5.5vw,80px);
+    background:
+      radial-gradient(760px 460px at 90% -10%, rgba(47,127,212,.3), transparent 62%),
+      radial-gradient(520px 380px at 0% 120%, rgba(242,185,62,.08), transparent 60%),
+      var(--ink-fixed);
+  }
+  .page-head h1{
+    margin-top:16px;
+    font-size:clamp(2.4rem,4.6vw,3.6rem);
+    max-width:18ch;
+  }
+  .page-head h1 em{ font-style:normal; color:var(--yellow); }
+  .page-head__lede{
+    margin-top:24px;
+    max-width:56ch;
+    color:var(--muted-dark);
+    font-size:1.05rem;
+  }
+  .page-head__actions{
+    margin-top:32px;
+    display:flex; flex-wrap:wrap; gap:16px;
+  }
+  .page-head__facts{
+    list-style:none;
+    margin:40px 0 0; padding:24px 0 0;
+    border-top:1px solid var(--line-dark);
+    display:flex; flex-wrap:wrap; gap:8px 24px;
+  }
+  .page-head__facts li{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:.88rem; color:var(--muted-dark);
+  }
+  .page-head__facts li::before{
+    content:''; width:5px; height:5px; border-radius:50%;
+    background:var(--yellow);
+  }
+
+  /* ---------- price matrix ---------- */
+
+  .matrix-section{ background:var(--paper); }
+
+  .matrix{
+    margin-top:40px;
+    border:1px solid var(--line);
+    border-radius:var(--r);
+    background:var(--white);
+    box-shadow:var(--shadow-sm);
+    overflow:hidden;
+  }
+  .matrix__scroll{ overflow-x:auto; }
+  .matrix table{
+    width:100%; min-width:520px;
+    border-collapse:collapse;
+  }
+  .matrix th, .matrix td{
+    padding:16px 24px;
+    text-align:left;
+    border-bottom:1px solid var(--line);
+    font-size:.95rem;
+  }
+  .matrix thead th{
+    font-family:'Work Sans', sans-serif;
+    font-size:.72rem; font-weight:600;
+    letter-spacing:.14em; text-transform:uppercase;
+    color:var(--muted);
+    padding-top:24px; padding-bottom:24px;
+    vertical-align:bottom;
+  }
+  .matrix thead th span{
+    display:block;
+    margin-top:8px;
+    font-size:.72rem; letter-spacing:.1em; text-transform:none;
+    color:var(--blue);
+  }
+  .matrix tbody th{ font-weight:600; }
+  .matrix tbody tr:last-child th,
+  .matrix tbody tr:last-child td{ border-bottom:0; }
+  .matrix td{
+    font-family:'Big Shoulders Display', sans-serif;
+    font-size:1.5rem; font-weight:800; line-height:1;
+    white-space:nowrap;
+  }
+  .matrix .is-featured{ background:var(--blue-wash); }
+
+  .matrix__note{
+    margin-top:24px;
+    font-size:.9rem;
+    color:var(--muted);
+  }
+
+  /* ---------- detail bands ---------- */
+
+  .detail{
+    background:var(--paper);
+    border-top:1px solid var(--line);
+  }
+  .detail--alt{ background:var(--paper-2); }
+
+  .detail__head{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:32px;
+    align-items:start;
+  }
+  .detail h2{
+    margin-top:16px;
+    font-size:clamp(1.9rem,3vw,2.5rem);
+  }
+  .detail__desc{
+    margin-top:16px;
+    max-width:52ch;
+    font-size:1rem;
+    color:var(--muted);
+  }
+
+  .detail__prices{
+    display:grid; gap:8px;
+    min-width:264px;
+    padding:16px 24px;
+    border:1px solid var(--line);
+    border-radius:var(--r);
+    background:var(--white);
+    box-shadow:var(--shadow-sm);
+  }
+  .detail__prices div{
+    display:flex; align-items:baseline; justify-content:space-between;
+    gap:16px;
+    font-size:.87rem;
+    color:var(--muted);
+  }
+  .detail__prices strong{
+    font-family:'Big Shoulders Display', sans-serif;
+    font-size:1.3rem; font-weight:800; line-height:1;
+    color:var(--ink);
+  }
+
+  .detail__grid{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:16px;
+  }
+  .inc{
+    display:flex; align-items:flex-start; gap:16px;
+    padding:24px;
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:var(--r);
+    box-shadow:var(--shadow-sm);
+    transition:transform .4s var(--ease), border-color .3s ease;
+  }
+  .inc:hover{ transform:translateY(-2px); border-color:var(--line-strong); }
+  .inc__icon{
+    flex-shrink:0;
+    display:grid; place-items:center;
+    width:32px; height:32px;
+    border-radius:999px;
+    background:var(--blue-wash);
+    color:var(--blue);
+  }
+  .inc__icon svg{ width:16px; height:16px; }
+  .inc h3{
+    font-family:'Work Sans', sans-serif;
+    font-size:1rem; font-weight:600; letter-spacing:0;
+  }
+  .inc p{
+    margin-top:8px;
+    font-size:.9rem;
+    color:var(--muted);
+  }
+
+  .detail__cta{ margin-top:32px; }
+
+  /* featured (full detail) band */
+
+  .detail--featured{
+    background:var(--ink-fixed);
+    color:var(--paper-fixed);
+    border-top:0;
+  }
+  .detail--featured .detail__desc{ color:var(--muted-dark); }
+  .detail--featured .detail__prices{
+    background:rgba(246,248,249,.05);
+    border-color:rgba(246,248,249,.15);
+    box-shadow:none;
+  }
+  .detail--featured .detail__prices div{ color:var(--muted-dark); }
+  .detail--featured .detail__prices strong{ color:var(--paper-fixed); }
+  .detail--featured .inc{
+    background:rgba(246,248,249,.045);
+    border-color:rgba(246,248,249,.12);
+    box-shadow:none;
+  }
+  .detail--featured .inc:hover{ border-color:rgba(242,185,62,.4); }
+  .detail--featured .inc h3{ color:var(--paper-fixed); }
+  .detail--featured .inc p{ color:var(--muted-dark); }
+  .detail--featured .inc__icon{
+    background:rgba(242,185,62,.16);
+    color:var(--yellow);
+  }
+  .detail--featured .plan__tag{
+    color:var(--yellow);
+    background:rgba(242,185,62,.14);
+  }
+  .detail--featured .btn--dark{
+    background:var(--yellow);
+    color:var(--ink-fixed);
+  }
+  .detail--featured .btn--dark:hover{ background:var(--yellow-soft); }
+
+  /* ---------- good to know ---------- */
+
+  .know{ background:var(--paper-2); }
+  .know__grid{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:16px;
+  }
+  .know__item{
+    padding:24px;
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:var(--r);
+  }
+  .know__item h3{
+    font-family:'Work Sans', sans-serif;
+    font-size:1rem; font-weight:600; letter-spacing:0;
+  }
+  .know__item p{
+    margin-top:8px;
+    font-size:.92rem;
+    color:var(--muted);
+  }
+
+  /* ---------- booking band ---------- */
+
+  .book{
+    position:relative; overflow:hidden;
+    background:var(--ink-fixed);
+    color:var(--paper-fixed);
+  }
+  .book__grid{
+    display:grid;
+    grid-template-columns:1fr 1.05fr;
+    gap:clamp(32px,4vw,64px);
+    align-items:start;
+  }
+  .book h2{ font-size:clamp(1.8rem,3vw,2.4rem); }
+  .book__intro p{
+    margin-top:16px;
+    max-width:44ch;
+    color:var(--muted-dark);
+  }
+  .book__facts{
+    list-style:none;
+    margin:32px 0 0; padding:0;
+    display:grid; gap:8px;
+  }
+  .book__facts li{
+    display:flex; align-items:center; gap:8px;
+    font-size:.9rem; color:var(--muted-dark);
+  }
+  .book__facts li::before{
+    content:''; width:5px; height:5px; border-radius:50%;
+    background:var(--yellow);
+  }
+
+  .booking-card{
+    display:grid; gap:16px;
+    padding:32px;
+    background:var(--paper-fixed);
+    color:var(--ink-fixed);
+    border-radius:var(--r-lg);
+    box-shadow:0 40px 70px -46px rgba(0,0,0,.9);
+  }
+  .booking-card__grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:16px;
+  }
+  .field{ display:grid; gap:8px; }
+  .field--full{ grid-column:1 / -1; }
+  .field label{
+    font-size:.75rem; font-weight:600;
+    letter-spacing:.12em; text-transform:uppercase;
+    color:rgba(15,21,27,.62);
+  }
+  .field__optional{
+    font-weight:500; letter-spacing:0; text-transform:none;
+    color:rgba(15,21,27,.45);
+  }
+  .field input, .field select, .field textarea{
+    width:100%;
+    font-family:'Work Sans', sans-serif;
+    font-size:.95rem;
+    color:#0F151B;
+    background:#FFFFFF;
+    border:1px solid rgba(15,21,27,.18);
+    border-radius:12px;
+    padding:16px 16px;
+    transition:border-color .2s ease, box-shadow .2s ease;
+    -webkit-appearance:none; appearance:none;
+  }
+  .field textarea{ min-height:104px; resize:vertical; }
+  .field input::placeholder, .field textarea::placeholder{ color:rgba(15,21,27,.4); }
+  .field input:focus, .field select:focus, .field textarea:focus{
+    outline:none;
+    border-color:var(--blue);
+    box-shadow:0 0 0 3px rgba(47,127,212,.18);
+  }
+  .field select{
+    padding-right:48px;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6l4 4 4-4' stroke='%230F151B' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-position:right 16px center;
+    background-size:16px;
+  }
+  .field [aria-invalid="true"]{
+    border-color:#C0392B;
+    box-shadow:0 0 0 3px rgba(192,57,43,.14);
+  }
+
+  .hp{
+    position:absolute !important;
+    left:-9999px !important;
+    width:1px; height:1px;
+    opacity:0;
+  }
+
+  .booking-card .btn{ width:100%; }
+
+  .booking-card__status{ display:none; }
+  .booking-card__status.is-shown{
+    display:block;
+    padding:16px;
+    border-radius:12px;
+    font-size:.9rem;
+  }
+  .booking-card__status--error{ background:rgba(192,57,43,.08); color:#8E2A20; }
+  .booking-card__status--ok{ background:rgba(47,127,212,.1); color:#1F5E9E; }
+  .booking-card__status a{ color:inherit; font-weight:600; }
+
+  .booking-card__fine{
+    font-size:.8rem;
+    color:rgba(15,21,27,.55);
+    text-align:center;
+  }
+
+  @media (max-width:960px){
+    .detail__head{ grid-template-columns:1fr; }
+    .detail__prices{ min-width:0; }
+    .detail__grid{ grid-template-columns:1fr; }
+    .know__grid{ grid-template-columns:1fr; }
+    .book__grid{ grid-template-columns:1fr; }
+  }
+
+  @media (max-width:600px){
+    .matrix th, .matrix td{ padding:16px 16px; }
+    .page-head__actions .btn{ width:100%; }
+    .inc{ padding:16px; }
+    .booking-card{ padding:24px; }
+    .booking-card__grid{ grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C12 2 5 11 5 15.5C5 19.09 8.13 22 12 22C15.87 22 19 19.09 19 15.5C19 11 12 2 12 2Z"/></svg>
+      </span>
+      Clean Detailing
+    </a>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="index.html#about">About</a>
+      <a href="index.html#kit">The kit</a>
+      <a href="index.html#pricing">Services</a>
+      <a href="index.html#how">Process</a>
+      <a href="index.html#area">Area</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg>
+    </button>
+    <a class="btn btn--yellow btn--sm" href="#book">Book now</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="page-head">
+    <div class="wrap">
+      <a class="back" href="index.html">&larr; Back to home</a>
+      <span class="kicker kicker--light hero-in"><span class="kicker__num">03</span> Pricing</span>
+      <h1 class="hero-in" style="--d:1">Every detail,<br><em>priced by size.</em></h1>
+      <p class="page-head__lede hero-in" style="--d:2">Three services, three vehicle sizes, and a clear list of everything each one covers. Pick the clean you want &mdash; we bring the rest to your driveway.</p>
+      <div class="page-head__actions hero-in" style="--d:3">
+        <a class="btn btn--yellow" href="#matrix">Compare prices</a>
+        <a class="btn btn--ghost" href="#book">Book a detail</a>
+      </div>
+      <ul class="page-head__facts hero-in" style="--d:4">
+        <li>Hand wash only</li>
+        <li>We come to you</li>
+        <li>Chagrin Falls + 10 miles</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="matrix-section" id="matrix">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker reveal"><span class="kicker__num">01</span> At a glance</span>
+        <h2 class="reveal">Prices by vehicle size</h2>
+        <p class="reveal">Sedans and coupes are the base rate. SUVs, crossovers, trucks, and minivans add $10.</p>
+      </div>
+
+      <div class="matrix reveal">
+        <div class="matrix__scroll">
+          <table>
+            <caption class="sr-only">Clean Detailing prices for each service by vehicle size</caption>
+            <thead>
+              <tr>
+                <th scope="col">Vehicle</th>
+                <th scope="col">Wash &amp; Shine<span>Exterior</span></th>
+                <th scope="col">Deep Clean<span>Interior</span></th>
+                <th scope="col" class="is-featured">Full Detail<span>Inside + out</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Sedan / Coupe</th>
+                <td>$65</td>
+                <td>$65</td>
+                <td class="is-featured">$110</td>
+              </tr>
+              <tr>
+                <th scope="row">SUV / Crossover</th>
+                <td>$75</td>
+                <td>$75</td>
+                <td class="is-featured">$120</td>
+              </tr>
+              <tr>
+                <th scope="row">Truck / Minivan</th>
+                <td>$75</td>
+                <td>$75</td>
+                <td class="is-featured">$120</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p class="matrix__note reveal">Full Detail saves you $20 compared with booking Wash &amp; Shine and Deep Clean separately.</p>
+    </div>
+  </section>
+
+  <section class="detail" id="wash-shine">
+    <div class="wrap">
+      <div class="detail__head">
+        <div>
+          <span class="plan__tag reveal">Exterior</span>
+          <h2 class="reveal">Wash &amp; Shine</h2>
+          <p class="detail__desc reveal">A full exterior hand wash with ceramic protection and a streak-free shine.</p>
+        </div>
+        <div class="detail__prices reveal">
+          <div><span>Sedan / Coupe</span><strong>$65</strong></div>
+          <div><span>SUV / Crossover</span><strong>$75</strong></div>
+          <div><span>Truck / Minivan</span><strong>$75</strong></div>
+        </div>
+      </div>
+
+      <div class="detail__grid" data-stagger>
+        <article class="inc">
+          <span class="inc__icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h3>Full hand wash</h3>
+            <p>Pre-rinse, hand wash with soap and a microfiber mitt, then a careful dry &mdash; no brushes, no swirls.</p>
+          </div>
+        </article>
+        <article class="inc">
+          <span class="inc__icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h3>Wheel &amp; tire clean</h3>
+            <p>Wheels and tires cleaned and rinsed with soft brushes that won't scratch the finish.</p>
+          </div>
+        </article>
+        <article class="inc">
+          <span class="inc__icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h3>Ceramic glass coating</h3>
+            <p>Exterior glass cleaned and coated so water beads up and wipes away clean.</p>
+          </div>
+        </article>
+        <article class="inc">
+          <span class="inc__icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h3>Wax &amp; sealant finish</h3>
+            <p>Wax and sealant applied and buffed out for gloss and protection that lasts.</p>
+          </div>
+        </article>
+      </div>
+
+      <a class="btn btn--dark detail__cta reveal" href="#book" data-book-service="Wash &amp; Shine">Book Wash &amp; Shine</a>
+    </div>
+  </section>
+
+  <section class="detail detail--alt" id="deep-clean">
+    <div class="wrap">
+      <div class="detail__head">
+        <div>
+          <span class="plan__tag reveal">Interior</span>
+          <h2 class="reveal">Deep Clean</h2>
+          <p class="detail__desc reveal">A full interior refresh, top to bottom, inside every crevice.</p>
+        </div>
+        <div class="detail__prices reveal">
+          <div><span>Sedan / Coupe</span><strong>$65</strong></div>
+          <div><span>SUV / Crossover</span><strong>$75</strong></div>
+          <div><span>Truck / Minivan</span><strong>$75</strong></div>
+        </div>
+      </div>
+
+      <div class="detail__grid" data-stagger>
+        <article class="inc">
+          <span class="inc__icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h3>Full vacuum</h3>
+            <p>Carpets, seats, mats, and the trunk vacuumed, including the corners and under the seats.</p>
+          </div>
+        </article>
+        <article class="inc">
+          <span class="inc__icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h3>Vent, seam &amp; cupholder detailing</h3>
+            <p>Air vents, panel seams, and cupholders brushed and wiped out &mdash; the spots a quick clean misses.</p>
+          </div>
+        </article>
+        <article class="inc">
+          <span class="inc__icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h3>All-surface wipe-down</h3>
+            <p>Dash, console, door panels, and trim wiped down with the right product for each surface.</p>
+          </div>
+        </article>
+        <article class="inc">
+          <span class="inc__icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h3>Fabric protectant</h3>
+            <p>Fabric seats and carpets treated to help resist spills and stains.</p>
+          </div>
+        </article>
+      </div>
+
+      <a class="btn btn--dark detail__cta reveal" href="#book" data-book-service="Deep Clean">Book Deep Clean</a>
+    </div>
+  </section>
+
+  <section class="detail detail--featured" id="full-detail">
+    <div class="wrap">
+      <div class="detail__head">
+        <div>
+          <span class="plan__tag reveal">Save $20</span>
+          <h2 class="reveal">Full Detail</h2>
+          <p class="detail__desc reveal">Everything above, inside and out, in one visit &mdash; the whole car done at once.</p>
+        </div>
+        <div class="detail__prices reveal">
+          <div><span>Sedan / Coupe</span><strong>$110</strong></div>
+          <div><span>SUV / Crossover</span><strong>$120</strong></div>
+          <div><span>Truck / Minivan</span><strong>$120</strong></div>
+        </div>
+      </div>
+
+      <div class="detail__grid" data-stagger>
+        <article class="inc">
+          <span class="inc__icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h3>Full hand wash</h3>
+            <p>Pre-rinse, hand wash with soap and a microfiber mitt, then a careful dry &mdash; no brushes, no swirls.</p>
+          </div>
+        </article>
+        <article class="inc">
+          <span class="inc__icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h3>Wheel &amp; tire clean</h3>
+            <p>Wheels and tires cleaned and rinsed with soft brushes that won't scratch the finish.</p>
+          </div>
+        </article>
+        <article class="inc">
+          <span class="inc__icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h3>Ceramic glass coating</h3>
+            <p>Exterior glass cleaned and coated so water beads up and wipes away clean.</p>
+          </div>
+        </article>
+        <article class="inc">
+          <span class="inc__icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h3>Wax &amp; sealant finish</h3>
+            <p>Wax and sealant applied and buffed out for gloss and protection that lasts.</p>
+          </div>
+        </article>
+        <article class="inc">
+          <span class="inc__icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h3>Full vacuum</h3>
+            <p>Carpets, seats, mats, and the trunk vacuumed, including the corners and under the seats.</p>
+          </div>
+        </article>
+        <article class="inc">
+          <span class="inc__icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h3>Vent, seam &amp; cupholder detailing</h3>
+            <p>Air vents, panel seams, and cupholders brushed and wiped out &mdash; the spots a quick clean misses.</p>
+          </div>
+        </article>
+        <article class="inc">
+          <span class="inc__icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h3>All-surface wipe-down</h3>
+            <p>Dash, console, door panels, and trim wiped down with the right product for each surface.</p>
+          </div>
+        </article>
+        <article class="inc">
+          <span class="inc__icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h3>Fabric protectant</h3>
+            <p>Fabric seats and carpets treated to help resist spills and stains.</p>
+          </div>
+        </article>
+      </div>
+
+      <a class="btn btn--dark detail__cta reveal" href="#book" data-book-service="Full Detail">Book Full Detail</a>
+    </div>
+  </section>
+
+  <section class="know">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker reveal"><span class="kicker__num">02</span> Good to know</span>
+        <h2 class="reveal">Before you book</h2>
+      </div>
+
+      <div class="know__grid" data-stagger>
+        <div class="know__item">
+          <h3>We come to you</h3>
+          <p>You just need a driveway and access to a hose. We bring the soap, towels, brushes, and everything else.</p>
+        </div>
+        <div class="know__item">
+          <h3>Priced by size</h3>
+          <p>Sedans and coupes are the base rate. SUVs, crossovers, trucks, and minivans are $10 more per service.</p>
+        </div>
+        <div class="know__item">
+          <h3>Pet hair &amp; heavy soil</h3>
+          <p>Heavy pet hair or a first clean in a while? Mention it when you book so we can plan the extra time.</p>
+        </div>
+        <div class="know__item">
+          <h3>Service area</h3>
+          <p>Based in Chagrin Falls and currently booking within about 10 miles. Not sure if you're in range? Send a message and we'll confirm.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="book" id="book">
+    <div class="wrap book__grid">
+      <div class="book__intro">
+        <span class="kicker kicker--light reveal"><span class="kicker__num">03</span> Book</span>
+        <h2 class="reveal">Request a time.</h2>
+        <p class="reveal">Tell us the vehicle, the service, and when you'd like us there. We reply to confirm the slot.</p>
+        <ul class="book__facts reveal">
+          <li>Hand wash only</li>
+          <li>We come to you</li>
+          <li>Within about 10 miles of Chagrin Falls</li>
+        </ul>
+      </div>
+
+      <form class="booking-card" id="bookingForm" action="/api/book" method="post">
+        <noscript><p class="booking-card__fine">This form needs JavaScript. You can also use the <a href="index.html#contact">contact section</a>.</p></noscript>
+
+        <div class="booking-card__grid">
+          <div class="field">
+            <label for="bkName">Name</label>
+            <input id="bkName" name="name" type="text" autocomplete="name" maxlength="80" required>
+          </div>
+          <div class="field">
+            <label for="bkContact">Email or phone</label>
+            <input id="bkContact" name="contact" type="text" autocomplete="email" maxlength="120" required>
+          </div>
+          <div class="field">
+            <label for="bkVehicle">Vehicle size</label>
+            <select id="bkVehicle" name="vehicle" required>
+              <option value="Sedan / Coupe">Sedan / Coupe</option>
+              <option value="SUV / Crossover">SUV / Crossover</option>
+              <option value="Truck / Minivan">Truck / Minivan</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="bkService">Service</label>
+            <select id="bkService" name="service" required>
+              <option value="Wash &amp; Shine">Wash &amp; Shine</option>
+              <option value="Deep Clean">Deep Clean</option>
+              <option value="Full Detail">Full Detail</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="bkDate">Preferred date</label>
+            <input id="bkDate" name="date" type="date" required>
+          </div>
+          <div class="field">
+            <label for="bkTime">Preferred time</label>
+            <select id="bkTime" name="time" required>
+              <option value="Morning (8-11am)">Morning (8-11am)</option>
+              <option value="Midday (11am-2pm)">Midday (11am-2pm)</option>
+              <option value="Afternoon (2-5pm)">Afternoon (2-5pm)</option>
+              <option value="Evening (5-7pm)">Evening (5-7pm)</option>
+            </select>
+          </div>
+          <div class="field field--full">
+            <label for="bkNotes">Notes <span class="field__optional">(optional)</span></label>
+            <textarea id="bkNotes" name="notes" maxlength="600" rows="4" placeholder="Pet hair, gate code, anything else we should know."></textarea>
+          </div>
+        </div>
+
+        <div class="hp" aria-hidden="true">
+          <label for="bkCompany">Company</label>
+          <input id="bkCompany" name="company" type="text" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="booking-card__status" id="bkStatus"></div>
+
+        <button class="btn btn--dark" type="submit">Send request</button>
+        <p class="booking-card__fine">We only use these details to arrange your detail.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="foot-brand"><i aria-hidden="true"></i>Clean Detailing</span>
+    <span>Based in Chagrin Falls, Ohio &middot; <span id="year">2026</span></span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var hasIO = 'IntersectionObserver' in window;
+
+    var groups = document.querySelectorAll('[data-stagger]');
+    for (var g = 0; g < groups.length; g++) {
+      var kids = groups[g].children;
+      for (var k = 0; k < kids.length; k++) {
+        kids[k].classList.add('reveal');
+        kids[k].style.setProperty('--d', k);
+      }
+    }
+
+    var targets = document.querySelectorAll('.reveal');
+
+    if (reduce || !hasIO) {
+      for (var i = 0; i < targets.length; i++) targets[i].classList.add('in');
+    } else {
+      var revealObserver = new IntersectionObserver(function (entries) {
+        for (var e = 0; e < entries.length; e++) {
+          if (entries[e].isIntersecting) {
+            entries[e].target.classList.add('in');
+            revealObserver.unobserve(entries[e].target);
+          }
+        }
+      }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+
+      for (var t = 0; t < targets.length; t++) revealObserver.observe(targets[t]);
+    }
+
+    document.addEventListener('visibilitychange', function () {
+      root.classList.toggle('is-tab-hidden', document.hidden);
+    });
+
+    var nav = document.getElementById('nav');
+    var bar = document.getElementById('progressBar');
+    var ticking = false;
+    var isScrolled = false;
+    var maxScroll = 0;
+
+    function measure() {
+      maxScroll = Math.max(root.scrollHeight - window.innerHeight, 0);
+    }
+
+    function onScroll() {
+      var y = window.pageYOffset || root.scrollTop || 0;
+      var next = y > 6;
+
+      if (nav && next !== isScrolled) {
+        nav.classList.toggle('is-scrolled', next);
+        isScrolled = next;
+      }
+
+      if (bar) {
+        bar.style.transform = 'scaleX(' + (maxScroll > 0 ? Math.min(y / maxScroll, 1) : 0) + ')';
+      }
+
+      ticking = false;
+    }
+
+    measure();
+    window.addEventListener('resize', measure, { passive: true });
+    window.addEventListener('load', measure);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(onScroll);
+      }
+    }, { passive: true });
+
+    onScroll();
+
+    var year = document.getElementById('year');
+    if (year) year.textContent = new Date().getFullYear();
+
+    var toggle = document.getElementById('themeToggle');
+
+    function setTheme(theme, persist) {
+      root.setAttribute('data-theme', theme);
+      if (toggle) {
+        var isDark = theme === 'dark';
+        toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+        toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+      }
+      if (persist) {
+        try { localStorage.setItem('cd-theme', theme); } catch (e) {}
+      }
+    }
+
+    if (toggle) {
+      setTheme(root.getAttribute('data-theme') || 'light', false);
+      toggle.addEventListener('click', function () {
+        setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark', true);
+      });
+    }
+
+    root.classList.add('reveal-ready');
+  })();
+</script>
+
+<script>
+  (function () {
+    var form = document.getElementById('bookingForm');
+    if (!form) return;
+
+    var statusEl = document.getElementById('bkStatus');
+    var submit = form.querySelector('button[type="submit"]');
+    var submitLabel = submit ? submit.textContent : 'Send request';
+
+    var dateInput = document.getElementById('bkDate');
+    if (dateInput) {
+      var now = new Date();
+      var iso = now.getFullYear() + '-' +
+        String(now.getMonth() + 1).padStart(2, '0') + '-' +
+        String(now.getDate()).padStart(2, '0');
+      dateInput.min = iso;
+    }
+
+    function escapeHtml(value) {
+      return String(value).replace(/[&<>"']/g, function (char) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char];
+      });
+    }
+
+    function setStatus(kind, html) {
+      if (!statusEl) return;
+      statusEl.className = 'booking-card__status is-shown booking-card__status--' + kind;
+      statusEl.innerHTML = html;
+      statusEl.setAttribute('role', kind === 'error' ? 'alert' : 'status');
+    }
+
+    function clearStatus() {
+      if (!statusEl) return;
+      statusEl.className = 'booking-card__status';
+      statusEl.innerHTML = '';
+      statusEl.removeAttribute('role');
+    }
+
+    var bookLinks = document.querySelectorAll('[data-book-service]');
+    for (var i = 0; i < bookLinks.length; i++) {
+      bookLinks[i].addEventListener('click', function () {
+        var select = document.getElementById('bkService');
+        if (select) select.value = this.getAttribute('data-book-service');
+      });
+    }
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      clearStatus();
+
+      var invalid = form.querySelectorAll('[aria-invalid]');
+      for (var f = 0; f < invalid.length; f++) invalid[f].removeAttribute('aria-invalid');
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      var data = {};
+      new FormData(form).forEach(function (value, key) { data[key] = value; });
+
+      submit.disabled = true;
+      submit.textContent = 'Sending...';
+
+      fetch('/api/book', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      }).then(function (response) {
+        return response.json().catch(function () { return {}; }).then(function (body) {
+          return { ok: response.ok, status: response.status, body: body };
+        });
+      }).then(function (result) {
+        if (result.ok) {
+          var contact = data.contact || '';
+          form.reset();
+          setStatus('ok', 'Request sent. We will reply to <strong>' + escapeHtml(contact) + '</strong> to confirm your time.');
+          return;
+        }
+
+        if (result.status === 503) {
+          setStatus('error', 'Online booking is not connected yet. Please use the <a href="index.html#contact">contact section</a> instead.');
+          return;
+        }
+
+        if (result.status === 422 && result.body && result.body.fields) {
+          var names = Object.keys(result.body.fields);
+          for (var n = 0; n < names.length; n++) {
+            var field = form.querySelector('[name="' + names[n] + '"]');
+            if (field) field.setAttribute('aria-invalid', 'true');
+          }
+          setStatus('error', 'Please check the highlighted fields and try again.');
+          return;
+        }
+
+        if (result.status === 429) {
+          setStatus('error', 'Too many requests just now. Give it a minute and try again.');
+          return;
+        }
+
+        setStatus('error', 'That did not go through. Try again, or use the <a href="index.html#contact">contact section</a>.');
+      }).catch(function () {
+        setStatus('error', 'Could not reach the server. Check your connection and try again.');
+      }).then(function () {
+        submit.disabled = false;
+        submit.textContent = submitLabel;
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>

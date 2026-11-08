@@ -5,308 +5,232 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Clean Detailing | Mobile Car Detailing in Chagrin Falls, OH</title>
 <meta name="description" content="Clean Detailing is a mobile interior and exterior car detailing service based in Chagrin Falls, Ohio. We come to your driveway with everything needed for a hand wash, ceramic protection, and a full interior clean.">
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Work+Sans:wght@400;500;600&display=swap');
-
-  :root{
-    --ink:#12181F;
-    --ink-2:#1B232C;
-    --paper:#F4F6F7;
-    --paper-2:#E7ECEE;
-    --blue:#3D8BE0;
-    --yellow:#F2B93E;
-    --line-dark: rgba(244,246,247,0.14);
-    --line-light: rgba(18,24,31,0.12);
-    --radius: 6px;
-    --maxw: 1120px;
-  }
-
-  *{ box-sizing:border-box; }
-  html{ scroll-behavior:smooth; }
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Work Sans', sans-serif;
-    font-size:16px;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-  img,svg{ display:block; max-width:100%; }
-  a{ color:inherit; }
-  h1,h2,h3{
-    font-family:'Big Shoulders Display', sans-serif;
-    font-weight:800;
-    line-height:1.03;
-    margin:0;
-  }
-  p{ margin:0; }
-  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 28px; }
-  section{ padding:clamp(48px,7vw,96px) 0; }
-
-  a:focus-visible, button:focus-visible{
-    outline:2px solid var(--blue);
-    outline-offset:3px;
-  }
-
-  /* nav */
-  .nav{
-    position:sticky; top:0; z-index:20;
-    background:rgba(18,24,31,0.94);
-    backdrop-filter:blur(6px);
-    border-bottom:1px solid var(--line-dark);
-  }
-  .nav .wrap{
-    display:flex; align-items:center; justify-content:space-between;
-    padding-top:16px; padding-bottom:16px;
-  }
-  .brand{
-    display:flex; align-items:center; gap:8px;
-    font-family:'Big Shoulders Display', sans-serif;
-    font-weight:700; font-size:1.35rem; color:var(--paper);
-    text-decoration:none;
-  }
-  .brand svg{ width:20px; height:20px; color:var(--blue); }
-  .nav-cta{
-    background:var(--yellow); color:var(--ink);
-    font-weight:600; font-size:0.95rem;
-    padding:10px 20px; border-radius:var(--radius);
-    text-decoration:none;
-    transition:transform 0.15s ease, background 0.15s ease;
-  }
-  .nav-cta:hover{ background:#F7C766; transform:translateY(-1px); }
-
-  /* hero */
-  .hero{
-    background:var(--ink); color:var(--paper);
-    padding-top:clamp(56px,8vw,110px);
-    padding-bottom:clamp(56px,8vw,110px);
-  }
-  .hero .wrap{
-    display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:center;
-  }
-  .hero h1{
-    font-size:clamp(2.4rem,4.6vw,3.6rem);
-    max-width:15ch;
-  }
-  .hero p.lede{
-    margin-top:22px; max-width:46ch;
-    color:rgba(244,246,247,0.78);
-    font-size:1.08rem;
-  }
-  .cta-row{
-    margin-top:32px; display:flex; align-items:center; gap:22px; flex-wrap:wrap;
-  }
-  .btn-primary{
-    background:var(--yellow); color:var(--ink);
-    font-weight:600; font-size:1rem;
-    padding:14px 28px; border-radius:var(--radius);
-    text-decoration:none; display:inline-block;
-    transition:transform 0.15s ease, background 0.15s ease;
-  }
-  .btn-primary:hover{ background:#F7C766; transform:translateY(-1px); }
-  .link-quiet{
-    color:var(--paper); text-decoration:underline;
-    text-underline-offset:4px; text-decoration-color:rgba(244,246,247,0.4);
-    font-weight:500;
-  }
-  .link-quiet:hover{ text-decoration-color:var(--paper); }
-
-  .bead-panel{ width:100%; height:auto; border-radius:20px; }
-  .sheen{
-    transform-box:fill-box; transform-origin:center;
-    transform:translateX(-40px) rotate(18deg);
-    animation:sweep 2.4s cubic-bezier(.4,0,.2,1) 0.5s 1 forwards;
-  }
-  @keyframes sweep{ to{ transform:translateX(760px) rotate(18deg); } }
-  @media (prefers-reduced-motion:reduce){
-    .sheen{ animation:none; opacity:0; }
-  }
-
-  /* about */
-  .about{ background:var(--paper); }
-  .about h2{ font-size:clamp(1.6rem,3vw,2.15rem); max-width:16ch; }
-  .about > .wrap > p{
-    margin-top:16px; max-width:62ch; font-size:1.08rem; color:rgba(18,24,31,0.8);
-  }
-  .highlights{
-    margin-top:44px;
-    display:grid; grid-template-columns:repeat(3,1fr); gap:32px;
-  }
-  .highlight{ border-left:3px solid var(--blue); padding-left:18px; }
-  .highlight h3{
-    font-family:'Work Sans', sans-serif; font-size:1.1rem; font-weight:600; margin-bottom:8px;
-  }
-  .highlight p{ color:rgba(18,24,31,0.68); font-size:0.96rem; }
-
-  /* services */
-  .services{ background:var(--paper-2); }
-  .services h2, .how h2, .area h2, .contact h2{ font-size:clamp(1.6rem,3vw,2.15rem); }
-  .section-lede{ margin-top:12px; max-width:58ch; color:rgba(18,24,31,0.7); }
-  .contact .section-lede{ color:rgba(244,246,247,0.72); }
-
-  .plans{ margin-top:40px; display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
-  .plan{
-    background:var(--paper); border:1px solid var(--line-light);
-    border-radius:var(--radius); padding:28px; display:flex; flex-direction:column;
-  }
-  .plan.featured{ background:var(--ink-2); border-color:var(--ink-2); color:var(--paper); }
-  .plan .tag{ display:inline-block; font-size:0.8rem; font-weight:600; color:var(--blue); margin-bottom:10px; }
-  .plan.featured .tag{ color:var(--yellow); }
-  .plan h3{ font-family:'Work Sans', sans-serif; font-size:1.25rem; font-weight:600; }
-  .plan .price{
-    font-family:'Big Shoulders Display', sans-serif;
-    font-size:2.3rem; font-weight:800; margin:8px 0 14px;
-  }
-  .plan p.desc{ color:rgba(18,24,31,0.68); font-size:0.95rem; margin-bottom:18px; }
-  .plan.featured p.desc{ color:rgba(244,246,247,0.75); }
-  .plan ul{ list-style:none; margin:0 0 24px; padding:0; flex-grow:1; }
-  .plan li{ display:flex; gap:10px; align-items:flex-start; font-size:0.94rem; margin-bottom:10px; }
-  .plan li svg{ flex-shrink:0; margin-top:3px; width:16px; height:16px; color:var(--blue); }
-  .plan.featured li svg{ color:var(--yellow); }
-  .plan-btn{
-    display:inline-block; width:100%; text-align:center; box-sizing:border-box;
-    padding:12px; border-radius:var(--radius);
-    background:var(--ink); color:var(--paper);
-    font-weight:600; text-decoration:none; font-size:0.95rem;
-    transition:background 0.15s ease;
-  }
-  .plan.featured .plan-btn{ background:var(--yellow); color:var(--ink); }
-  .plan-btn:hover{ background:#2a333d; }
-  .plan.featured .plan-btn:hover{ background:#F7C766; }
-  .plans-note{ margin-top:24px; font-size:0.92rem; color:rgba(18,24,31,0.62); }
-
-  /* how it works */
-  .how{ background:var(--paper); }
-  .steps{ margin-top:44px; display:grid; grid-template-columns:repeat(3,1fr); gap:36px; }
-  .step .num{
-    font-family:'Big Shoulders Display', sans-serif;
-    font-size:2.3rem; font-weight:800; color:var(--blue); line-height:1;
-  }
-  .step h3{ font-family:'Work Sans', sans-serif; font-size:1.08rem; font-weight:600; margin-top:10px; }
-  .step p{ margin-top:8px; color:rgba(18,24,31,0.68); font-size:0.95rem; }
-
-  /* service area */
-  .area{ background:var(--paper-2); }
-  .chips{ margin-top:28px; display:flex; flex-wrap:wrap; gap:12px; }
-  .chip{ border:1px solid var(--line-light); border-radius:999px; padding:8px 18px; font-size:0.92rem; font-weight:500; }
-
-  /* contact */
-  .contact{ background:var(--ink); color:var(--paper); }
-  .contact-grid{ margin-top:36px; display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
-  .contact-chip{ border:1px dashed rgba(244,246,247,0.35); border-radius:var(--radius); padding:18px; }
-  .contact-chip .label{ font-size:0.85rem; color:rgba(244,246,247,0.55); margin-bottom:6px; }
-  .contact-chip .value{ font-size:1.05rem; font-weight:600; font-style:italic; color:rgba(244,246,247,0.85); }
-  .edit-note{
-    margin-top:28px; border:1px dashed rgba(244,246,247,0.3); border-radius:var(--radius);
-    padding:16px 20px; font-size:0.9rem; color:rgba(244,246,247,0.6);
-  }
-
-  footer{
-    background:var(--ink); color:rgba(244,246,247,0.5);
-    padding:28px 0; font-size:0.88rem; border-top:1px solid var(--line-dark);
-  }
-  footer .wrap{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; }
-
-  @media (max-width:860px){
-    .hero .wrap{ grid-template-columns:1fr; }
-    .hero .visual{ order:-1; max-width:420px; margin:0 auto; }
-    .highlights, .plans, .steps, .contact-grid{ grid-template-columns:1fr; }
-  }
-  @media (max-width:520px){
-    .nav-cta{ padding:8px 14px; font-size:0.88rem; }
-  }
-</style>
+<meta name="theme-color" content="#0F151B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230F151B'/%3E%3Cpath d='M12 4C12 4 6.5 10.2 6.5 13.6a5.5 5.5 0 0 0 11 0C17.5 10.2 12 4 12 4Z' fill='%232F7FD4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+  (function () {
+    var theme = 'light';
+    try {
+      var saved = localStorage.getItem('cd-theme');
+      if (saved === 'dark' || saved === 'light') {
+        theme = saved;
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        theme = 'dark';
+      }
+    } catch (e) {}
+    document.documentElement.setAttribute('data-theme', theme);
+    document.documentElement.classList.add('js');
+  })();
+</script>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="nav">
-  <div class="wrap">
+<div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
     <a class="brand" href="#top">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C12 2 5 11 5 15.5C5 19.09 8.13 22 12 22C15.87 22 19 19.09 19 15.5C19 11 12 2 12 2Z"/></svg>
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C12 2 5 11 5 15.5C5 19.09 8.13 22 12 22C15.87 22 19 19.09 19 15.5C19 11 12 2 12 2Z"/></svg>
+      </span>
       Clean Detailing
     </a>
-    <a class="nav-cta" href="#contact">Book now</a>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#kit">The kit</a>
+      <a href="#pricing">Services</a>
+      <a href="#how">Process</a>
+      <a href="#area">Area</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg>
+    </button>
+    <a class="btn btn--yellow btn--sm" href="pricing.html">Book now</a>
   </div>
 </header>
 
 <main id="top">
 
   <section class="hero">
-    <div class="wrap">
-      <div>
-        <h1>A hand wash and ceramic shine, right in your driveway.</h1>
-        <p class="lede">Clean Detailing is a mobile interior and exterior detail service based in Chagrin Falls, Ohio. We bring the water, soap, and tools — no drop-off, no shop, just your driveway.</p>
-        <div class="cta-row">
-          <a class="btn-primary" href="#contact">Book a detail</a>
-          <a class="link-quiet" href="#pricing">See pricing</a>
+    <div class="wrap hero__grid">
+
+      <div class="hero__copy">
+        <span class="hero__tag hero-in" style="--d:0"><i aria-hidden="true"></i>Mobile detailing &middot; Chagrin Falls, OH</span>
+        <h1 class="hero-in" style="--d:1">A hand wash and ceramic shine, <em>right in your driveway.</em></h1>
+        <p class="hero__lede hero-in" style="--d:2">Clean Detailing is a mobile interior and exterior detail service based in Chagrin Falls, Ohio. We bring the water, soap, and tools &mdash; no drop-off, no shop, just your driveway.</p>
+        <div class="hero__actions hero-in" style="--d:3">
+          <a class="btn btn--yellow" href="#contact">Book a detail</a>
+          <a class="btn btn--ghost" href="#pricing">See pricing</a>
+        </div>
+        <ul class="hero__facts hero-in" style="--d:4">
+          <li>Fully mobile</li>
+          <li>Ceramic included</li>
+          <li>Hand wash only</li>
+        </ul>
+      </div>
+
+      <div class="hero__visual hero-in" style="--d:2">
+        <div class="scene" data-anim>
+          <div class="scene__stage">
+            <svg class="scene__art" viewBox="0 0 560 320" role="img" aria-label="Illustration of a ceramic-coated car with soap suds and water beading on the paint">
+            <defs>
+              <linearGradient id="bodyGrad" x1="0" y1="0" x2=".45" y2="1">
+                <stop offset="0" stop-color="#4C97E3"/>
+                <stop offset=".55" stop-color="#2564A6"/>
+                <stop offset="1" stop-color="#143A5E"/>
+              </linearGradient>
+              <linearGradient id="glassGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#C6DEF5" stop-opacity=".62"/>
+                <stop offset="1" stop-color="#0C1823" stop-opacity=".92"/>
+              </linearGradient>
+              <radialGradient id="sceneGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0" stop-color="#2F7FD4" stop-opacity=".34"/>
+                <stop offset="1" stop-color="#2F7FD4" stop-opacity="0"/>
+              </radialGradient>
+              <mask id="archMask">
+                <rect width="560" height="320" fill="#fff"/>
+                <circle cx="152" cy="230" r="46" fill="#000"/>
+                <circle cx="426" cy="230" r="46" fill="#000"/>
+              </mask>
+            </defs>
+
+            <ellipse cx="300" cy="176" rx="252" ry="152" fill="url(#sceneGlow)"/>
+
+            <ellipse cx="286" cy="268" rx="214" ry="15" fill="#000" opacity=".38"/>
+
+            <path d="M54 204C54 180 68 167 94 163L150 154C178 122 212 108 254 106L340 106C384 108 414 125 438 155L492 165C516 169 528 183 528 201L528 209C528 218 520 223 510 223L70 223C59 223 54 214 54 205Z"
+                  fill="url(#bodyGrad)" mask="url(#archMask)"/>
+
+            <g mask="url(#archMask)">
+              <path d="M206 152L242 116L292 116L292 152Z" fill="url(#glassGrad)"/>
+              <path d="M302 116L340 116L366 152L302 152Z" fill="url(#glassGrad)"/>
+              <path d="M292 118V150" stroke="#0B1A26" stroke-width="3" opacity=".55"/>
+              <path d="M292 154V212" stroke="#0B2036" stroke-width="2" opacity=".45"/>
+              <path d="M92 196C180 190 300 190 470 198" stroke="#fff" stroke-width="2" opacity=".1"/>
+              <rect x="300" y="166" width="24" height="4" rx="2" fill="#0B2036" opacity=".4"/>
+              <rect x="200" y="166" width="20" height="4" rx="2" fill="#0B2036" opacity=".4"/>
+              <rect x="500" y="176" width="22" height="9" rx="4.5" fill="#F2B93E" opacity=".92"/>
+              <rect x="58" y="177" width="14" height="8" rx="4" fill="#E2574C" opacity=".82"/>
+            </g>
+
+            <g>
+              <circle cx="152" cy="230" r="37" fill="#0A0F14"/>
+              <circle cx="152" cy="230" r="22" fill="none" stroke="#3D5670" stroke-width="5"/>
+              <g stroke="#5B738C" stroke-width="3" opacity=".75">
+                <path d="M152 208V252"/>
+                <path d="M130 230H174"/>
+              </g>
+              <circle cx="152" cy="230" r="5" fill="#5B738C"/>
+            </g>
+            <g>
+              <circle cx="426" cy="230" r="37" fill="#0A0F14"/>
+              <circle cx="426" cy="230" r="22" fill="none" stroke="#3D5670" stroke-width="5"/>
+              <g stroke="#5B738C" stroke-width="3" opacity=".75">
+                <path d="M426 208V252"/>
+                <path d="M404 230H448"/>
+              </g>
+              <circle cx="426" cy="230" r="5" fill="#5B738C"/>
+            </g>
+
+            </svg>
+
+            <div class="scene__deco" aria-hidden="true">
+              <span class="sheen"></span>
+
+              <i class="bead" style="--l:28.6%;--t:55.6%;--s:1.45%"></i>
+              <i class="bead" style="--l:38.2%;--t:60%;--s:1.1%;--delay:-1.7s"></i>
+              <i class="bead" style="--l:58.9%;--t:53.8%;--s:1.6%;--delay:-3.1s"></i>
+              <i class="bead" style="--l:71.1%;--t:58.8%;--s:1.1%;--delay:-2.4s"></i>
+              <i class="bead" style="--l:82.5%;--t:55.6%;--s:1.25%;--delay:-0.9s"></i>
+              <i class="bead" style="--l:44.6%;--t:63.4%;--s:0.9%;--delay:-3.9s"></i>
+
+              <i class="bub" style="--l:37.1%;--t:30.6%;--s:2.9%;--dur:5.2s"></i>
+              <i class="bub" style="--l:45%;--t:25%;--s:2.2%;--dur:6.4s;--delay:-1.5s"></i>
+              <i class="bub" style="--l:53.6%;--t:21.9%;--s:3.6%;--dur:7.2s;--delay:-2.8s"></i>
+              <i class="bub" style="--l:63.6%;--t:26.3%;--s:2.5%;--dur:6s;--delay:-0.8s"></i>
+              <i class="bub" style="--l:71.8%;--t:31.3%;--s:3.2%;--dur:5.8s;--delay:-3.5s"></i>
+              <i class="bub" style="--l:30%;--t:34.4%;--s:1.8%;--dur:6.8s;--delay:-2.1s"></i>
+
+              <i class="bub bub--rise" style="--l:50.4%;--t:36.9%;--s:1.4%;--delay:-1.6s"></i>
+              <i class="bub bub--rise" style="--l:59.3%;--t:33.8%;--s:1.15%;--delay:-3.4s"></i>
+              <i class="bub bub--rise" style="--l:42.1%;--t:32.5%;--s:1.3%;--delay:-5.2s"></i>
+
+              <span class="mitt"></span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="visual">
-        <svg class="bead-panel" viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of water beading on a ceramic-coated surface">
-          <defs>
-            <linearGradient id="panelGrad" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#1B232C"/>
-              <stop offset="100%" stop-color="#0C1016"/>
-            </linearGradient>
-            <linearGradient id="sheenGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="rgba(255,255,255,0)"/>
-              <stop offset="50%" stop-color="rgba(255,255,255,0.16)"/>
-              <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
-            </linearGradient>
-            <radialGradient id="beadGrad" cx="35%" cy="28%" r="72%">
-              <stop offset="0%" stop-color="#9FD0FF"/>
-              <stop offset="45%" stop-color="#3D8BE0"/>
-              <stop offset="100%" stop-color="#1E4A82"/>
-            </radialGradient>
-            <clipPath id="panelClip">
-              <rect x="0" y="0" width="520" height="420" rx="20"/>
-            </clipPath>
-          </defs>
 
-          <g clip-path="url(#panelClip)">
-            <rect x="0" y="0" width="520" height="420" fill="url(#panelGrad)"/>
-
-            <circle cx="72" cy="70" r="18" fill="url(#beadGrad)"/>
-            <circle cx="130" cy="140" r="10" fill="url(#beadGrad)" opacity="0.9"/>
-            <circle cx="205" cy="58" r="13" fill="url(#beadGrad)" opacity="0.85"/>
-            <circle cx="266" cy="128" r="22" fill="url(#beadGrad)"/>
-            <circle cx="336" cy="66" r="9" fill="url(#beadGrad)" opacity="0.8"/>
-            <circle cx="392" cy="150" r="15" fill="url(#beadGrad)" opacity="0.9"/>
-            <circle cx="446" cy="88" r="11" fill="url(#beadGrad)" opacity="0.85"/>
-            <circle cx="60" cy="182" r="7" fill="url(#beadGrad)" opacity="0.75"/>
-            <circle cx="104" cy="224" r="14" fill="url(#beadGrad)" opacity="0.9"/>
-            <circle cx="184" cy="252" r="20" fill="url(#beadGrad)"/>
-            <circle cx="252" cy="210" r="8" fill="url(#beadGrad)" opacity="0.8"/>
-            <circle cx="322" cy="262" r="16" fill="url(#beadGrad)" opacity="0.9"/>
-            <circle cx="402" cy="228" r="12" fill="url(#beadGrad)" opacity="0.85"/>
-            <circle cx="152" cy="322" r="10" fill="url(#beadGrad)" opacity="0.8"/>
-            <circle cx="232" cy="344" r="15" fill="url(#beadGrad)" opacity="0.9"/>
-            <circle cx="312" cy="330" r="9" fill="url(#beadGrad)" opacity="0.8"/>
-            <circle cx="392" cy="312" r="13" fill="url(#beadGrad)" opacity="0.85"/>
-            <circle cx="452" cy="300" r="8" fill="url(#beadGrad)" opacity="0.75"/>
-
-            <rect class="sheen" x="-260" y="-80" width="200" height="580" fill="url(#sheenGrad)"/>
-          </g>
-        </svg>
-      </div>
     </div>
   </section>
 
-  <section class="about">
+  <div class="marquee" data-anim aria-hidden="true">
+    <div class="marquee__track">
+      <div class="marquee__group">
+        <span>Soap &amp; mitt</span><i>&#10022;</i>
+        <span>Hand wash</span><i>&#10022;</i>
+        <span>Ceramic seal</span><i>&#10022;</i>
+        <span>Interior detail</span><i>&#10022;</i>
+        <span>Wheels &amp; tires</span><i>&#10022;</i>
+        <span>Glass</span><i>&#10022;</i>
+        <span>Mobile service</span><i>&#10022;</i>
+      </div>
+      <div class="marquee__group">
+        <span>Soap &amp; mitt</span><i>&#10022;</i>
+        <span>Hand wash</span><i>&#10022;</i>
+        <span>Ceramic seal</span><i>&#10022;</i>
+        <span>Interior detail</span><i>&#10022;</i>
+        <span>Wheels &amp; tires</span><i>&#10022;</i>
+        <span>Glass</span><i>&#10022;</i>
+        <span>Mobile service</span><i>&#10022;</i>
+      </div>
+    </div>
+  </div>
+
+  <section class="about" id="about">
     <div class="wrap">
-      <h2>Careful by default.</h2>
-      <p>Every visit starts with a full foam pre-soak and a hand wash — never a drive-through brush. Exterior washes finish with a ceramic sealant that beads water and helps protect your paint, and interiors get cleaned by hand, from the dash down to the cupholders.</p>
-      <div class="highlights">
+      <div class="section-head">
+        <span class="kicker reveal"><span class="kicker__num">01</span> The standard</span>
+        <h2 class="reveal">Careful by default.</h2>
+        <p class="reveal">Every visit starts with a careful hand wash &mdash; never a drive-through brush. Exterior washes finish with a ceramic sealant that beads water and helps protect your paint, and interiors get cleaned by hand, from the dash down to the cupholders.</p>
+      </div>
+
+      <div class="highlights" data-stagger>
         <div class="highlight">
+          <div class="highlight__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3.2c0 0-6 6.5-6 9.9a6 6 0 0 0 12 0c0-3.4-6-9.9-6-9.9z"/>
+              <path d="M9.4 14.6a2.8 2.8 0 0 0 2.6 2.6"/>
+            </svg>
+          </div>
           <h3>Hand-washed, not machine-brushed</h3>
-          <p>A foam pre-soak loosens dirt first, so the wash mitt never has to grind grit into your paint.</p>
+          <p>A fresh mitt and clean soapy water lift dirt away, so grit never gets ground into your paint.</p>
         </div>
+
         <div class="highlight">
+          <div class="highlight__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3l7 3v5.6c0 4.7-3 7.7-7 9.4-4-1.7-7-4.7-7-9.4V6l7-3z"/>
+              <path d="M9 12.2l2.1 2.1L15.2 10"/>
+            </svg>
+          </div>
           <h3>Ceramic protection included</h3>
           <p>Every exterior wash finishes with a ceramic sealant that beads water and helps the shine last.</p>
         </div>
+
         <div class="highlight">
+          <div class="highlight__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 9.5h16v8.5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9.5z"/>
+              <path d="M9 9.5V6.8a3 3 0 0 1 6 0v2.7"/>
+              <path d="M9.5 14h5"/>
+            </svg>
+          </div>
           <h3>We bring everything</h3>
           <p>Vacuum, soaps, towels, and tools all come with us. You just need a driveway and a hose.</p>
         </div>
@@ -314,74 +238,151 @@
     </div>
   </section>
 
+  <section class="kit" id="kit">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker reveal"><span class="kicker__num">02</span> The kit</span>
+        <h2 class="reveal">Tools that earn their place.</h2>
+        <p class="reveal">Every visit runs on the same kit &mdash; clean, sorted, and safe for your paint. Hover a tool to see it work.</p>
+      </div>
+
+      <div class="tools" data-stagger>
+        <article class="tool">
+          <div class="tool__icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <g class="towel">
+                <rect x="10" y="32" width="44" height="18" rx="3"/>
+                <path d="M14 32l6-9h34l-6 9"/>
+                <path d="M20 23h34"/>
+                <path d="M22 39h10M22 44h16" stroke-opacity=".5"/>
+              </g>
+            </svg>
+          </div>
+          <h3>Microfiber towels</h3>
+          <p>Fresh, color-coded towels for paint, glass, and interior.</p>
+        </article>
+
+        <article class="tool">
+          <div class="tool__icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="22" y="10" width="20" height="13" rx="4"/>
+              <path d="M32 23v7"/>
+              <g class="pad">
+                <circle cx="32" cy="43" r="13"/>
+                <circle cx="32" cy="43" r="5" stroke-opacity=".6"/>
+                <path d="M32 30v6" stroke-opacity=".6"/>
+              </g>
+            </svg>
+          </div>
+          <h3>Dual-action polisher</h3>
+          <p>A gentle machine polish, worked panel by panel.</p>
+        </article>
+
+        <article class="tool">
+          <div class="tool__icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <g class="brush">
+                <path d="M32 8v14"/>
+                <rect x="24" y="22" width="16" height="14" rx="4"/>
+                <path d="M24 36v14M32 36v17M40 36v14" stroke-opacity=".7"/>
+              </g>
+            </svg>
+          </div>
+          <h3>Soft wheel brushes</h3>
+          <p>Barrel and face brushes that clean wheels without scratches.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section class="services" id="pricing">
     <div class="wrap">
-      <h2>Services and pricing</h2>
-      <p class="section-lede">Pick interior, exterior, or both. Prices below are for a standard car.</p>
-      <div class="plans">
+      <div class="section-head">
+        <span class="kicker reveal"><span class="kicker__num">03</span> Services</span>
+        <h2 class="reveal">Services and pricing</h2>
+        <p class="reveal">Pick interior, exterior, or both. Each service is priced by vehicle size.</p>
+      </div>
+
+      <div class="plans" data-stagger>
 
         <div class="plan">
-          <span class="tag">Exterior</span>
+          <span class="plan__tag">Exterior</span>
           <h3>Wash &amp; Shine</h3>
-          <div class="price">$65</div>
-          <p class="desc">A full exterior hand wash with ceramic protection and a streak-free shine.</p>
+          <p class="plan__desc">A full exterior hand wash with ceramic protection and a streak-free shine.</p>
+          <ul class="plan__rates">
+            <li><span>Sedan / Coupe</span><span class="rate__price">$65</span></li>
+            <li><span>SUV / Crossover</span><span class="rate__price">$75</span></li>
+            <li><span>Truck / Minivan</span><span class="rate__price">$75</span></li>
+          </ul>
           <ul>
-            <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Foam pre-soak &amp; hand wash</li>
+            <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Full hand wash</li>
             <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Wheel &amp; tire clean</li>
             <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Ceramic glass coating</li>
             <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Wax &amp; sealant finish</li>
           </ul>
-          <a class="plan-btn" href="#contact">Book this service</a>
+          <a class="plan__btn" href="pricing.html#wash-shine">See details &amp; book</a>
         </div>
 
         <div class="plan">
-          <span class="tag">Interior</span>
+          <span class="plan__tag">Interior</span>
           <h3>Deep Clean</h3>
-          <div class="price">$65</div>
-          <p class="desc">A full interior refresh, top to bottom, inside every crevice.</p>
+          <p class="plan__desc">A full interior refresh, top to bottom, inside every crevice.</p>
+          <ul class="plan__rates">
+            <li><span>Sedan / Coupe</span><span class="rate__price">$65</span></li>
+            <li><span>SUV / Crossover</span><span class="rate__price">$75</span></li>
+            <li><span>Truck / Minivan</span><span class="rate__price">$75</span></li>
+          </ul>
           <ul>
             <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Full vacuum</li>
             <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Vent, seam &amp; cupholder detailing</li>
             <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>All-surface wipe-down</li>
             <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Fabric protectant</li>
           </ul>
-          <a class="plan-btn" href="#contact">Book this service</a>
+          <a class="plan__btn" href="pricing.html#deep-clean">See details &amp; book</a>
         </div>
 
-        <div class="plan featured">
-          <span class="tag">Save $20</span>
+        <div class="plan plan--featured">
+          <span class="plan__tag">Save $20</span>
           <h3>Full Detail</h3>
-          <div class="price">$110</div>
-          <p class="desc">Everything above, inside and out, in one visit.</p>
+          <p class="plan__desc">Everything above, inside and out, in one visit.</p>
+          <ul class="plan__rates">
+            <li><span>Sedan / Coupe</span><span class="rate__price">$110</span></li>
+            <li><span>SUV / Crossover</span><span class="rate__price">$120</span></li>
+            <li><span>Truck / Minivan</span><span class="rate__price">$120</span></li>
+          </ul>
           <ul>
             <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in Wash &amp; Shine</li>
             <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in Deep Clean</li>
             <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>One visit, one price</li>
           </ul>
-          <a class="plan-btn" href="#contact">Book this service</a>
+          <a class="plan__btn" href="pricing.html#full-detail">See details &amp; book</a>
         </div>
 
       </div>
-      <p class="plans-note">SUVs, trucks, and minivans: add $10. Heavy pet hair or a first clean in a while? Just mention it when you book.</p>
+      <p class="plans__note reveal">Heavy pet hair or a first clean in a while? Just mention it when you book.</p>
     </div>
   </section>
 
-  <section class="how">
+  <section class="how" id="how">
     <div class="wrap">
-      <h2>How booking works</h2>
-      <div class="steps">
+      <div class="section-head">
+        <span class="kicker reveal"><span class="kicker__num">04</span> Process</span>
+        <h2 class="reveal">How booking works</h2>
+      </div>
+
+      <div class="steps" data-stagger>
         <div class="step">
-          <div class="num">1</div>
+          <div class="step__num">1</div>
           <h3>Reach out</h3>
           <p>Message to pick a service and a time that works for you.</p>
         </div>
         <div class="step">
-          <div class="num">2</div>
+          <div class="step__num">2</div>
           <h3>We come to you</h3>
-          <p>Just need a driveway and access to a hose — we bring everything else.</p>
+          <p>Just need a driveway and access to a hose &mdash; we bring everything else.</p>
         </div>
         <div class="step">
-          <div class="num">3</div>
+          <div class="step__num">3</div>
           <h3>Drive off clean</h3>
           <p>Sit back while we detail your car right where it's parked.</p>
         </div>
@@ -389,11 +390,14 @@
     </div>
   </section>
 
-  <section class="area">
+  <section class="area" id="area">
     <div class="wrap">
-      <h2>Where we serve</h2>
-      <p class="section-lede">Based in Chagrin Falls and currently booking within about 10 miles, including:</p>
-      <div class="chips">
+      <div class="section-head">
+        <span class="kicker reveal"><span class="kicker__num">05</span> Service area</span>
+        <h2 class="reveal">Where we serve</h2>
+        <p class="reveal">Based in Chagrin Falls and currently booking within about 10 miles, including:</p>
+      </div>
+      <div class="chips" data-stagger>
         <span class="chip">Chagrin Falls</span>
         <!--
           <span class="chip">Bainbridge</span>
@@ -402,28 +406,43 @@
           <span class="chip">Solon</span>
         -->
       </div>
+      <p class="area__note reveal">Not sure if you're in range? <a href="#contact">Send a message</a> and we'll confirm before booking.</p>
     </div>
   </section>
 
   <section class="contact" id="contact">
     <div class="wrap">
-      <h2>Get in touch</h2>
-      <p class="section-lede">Message to pick a service and a time — we'll work around your schedule. Let us know which service you'd like when you reach out.</p>
-      <div class="contact-grid">
-        <div class="contact-chip">
-          <div class="label">Call or text</div>
-          <div class="value">Add your phone number</div>
+      <div class="section-head">
+        <span class="kicker kicker--light reveal"><span class="kicker__num">06</span> Contact</span>
+        <h2 class="reveal">Get in touch</h2>
+        <p class="reveal">Message to pick a service and a time &mdash; we'll work around your schedule. Let us know which service you'd like when you reach out.</p>
+      </div>
+
+      <div class="contact__grid" data-stagger>
+        <div class="contact-card">
+          <div class="contact-card__label">
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5.5 3.5h2l1.4 3.3-1.6 1.2a9 9 0 0 0 4.7 4.7l1.2-1.6 3.3 1.4v2c0 .8-.7 1.5-1.5 1.5A12.5 12.5 0 0 1 4 5c0-.8.7-1.5 1.5-1.5z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Call or text
+          </div>
+          <div class="contact-card__value">Add your phone number</div>
         </div>
-        <div class="contact-chip">
-          <div class="label">Instagram</div>
-          <div class="value">Add your handle</div>
+        <div class="contact-card">
+          <div class="contact-card__label">
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3.2" y="3.2" width="13.6" height="13.6" rx="4" stroke="currentColor" stroke-width="1.4"/><circle cx="10" cy="10" r="3.2" stroke="currentColor" stroke-width="1.4"/><circle cx="14.2" cy="5.9" r="1" fill="currentColor"/></svg>
+            Instagram
+          </div>
+          <div class="contact-card__value">Add your handle</div>
         </div>
-        <div class="contact-chip">
-          <div class="label">Email</div>
-          <div class="value">Add your email</div>
+        <div class="contact-card">
+          <div class="contact-card__label">
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="2.8" y="4.6" width="14.4" height="10.8" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M3.4 6l6.6 4.6L16.6 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Email
+          </div>
+          <div class="contact-card__value">Add your email</div>
         </div>
       </div>
-      <div class="edit-note">Note to Clean Detailing: swap the placeholders above for your real contact details before sharing this page.</div>
+
+      <div class="edit-note reveal">Note to Clean Detailing: swap the placeholders above for your real contact details before sharing this page.</div>
     </div>
   </section>
 
@@ -431,10 +450,134 @@
 
 <footer>
   <div class="wrap">
-    <span>Clean Detailing</span>
-    <span>Based in Chagrin Falls, Ohio.</span>
+    <span class="foot-brand"><i aria-hidden="true"></i>Clean Detailing</span>
+    <span>Based in Chagrin Falls, Ohio &middot; <span id="year">2026</span></span>
   </div>
 </footer>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var hasIO = 'IntersectionObserver' in window;
+
+    /* staggered groups reveal in sequence */
+    var groups = document.querySelectorAll('[data-stagger]');
+    for (var g = 0; g < groups.length; g++) {
+      var kids = groups[g].children;
+      for (var k = 0; k < kids.length; k++) {
+        kids[k].classList.add('reveal');
+        kids[k].style.setProperty('--d', k);
+      }
+    }
+
+    var targets = document.querySelectorAll('.reveal');
+
+    if (reduce || !hasIO) {
+      for (var i = 0; i < targets.length; i++) targets[i].classList.add('in');
+    } else {
+      var revealObserver = new IntersectionObserver(function (entries) {
+        for (var e = 0; e < entries.length; e++) {
+          if (entries[e].isIntersecting) {
+            entries[e].target.classList.add('in');
+            revealObserver.unobserve(entries[e].target);
+          }
+        }
+      }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+
+      for (var t = 0; t < targets.length; t++) revealObserver.observe(targets[t]);
+    }
+
+    /* stop ambient animation when a block is offscreen */
+    var animated = document.querySelectorAll('[data-anim]');
+    if (hasIO && !reduce) {
+      var pauseObserver = new IntersectionObserver(function (entries) {
+        for (var e = 0; e < entries.length; e++) {
+          entries[e].target.classList.toggle('is-off', !entries[e].isIntersecting);
+        }
+      }, { rootMargin: '200px 0px' });
+
+      for (var a = 0; a < animated.length; a++) {
+        animated[a].classList.add('is-off');
+        pauseObserver.observe(animated[a]);
+      }
+    }
+
+    /* and when the tab is in the background */
+    document.addEventListener('visibilitychange', function () {
+      root.classList.toggle('is-tab-hidden', document.hidden);
+    });
+
+    /* nav condense + scroll progress, one frame per scroll burst */
+    var nav = document.getElementById('nav');
+    var bar = document.getElementById('progressBar');
+    var ticking = false;
+    var isScrolled = false;
+    var maxScroll = 0;
+
+    function measure() {
+      maxScroll = Math.max(root.scrollHeight - window.innerHeight, 0);
+    }
+
+    function onScroll() {
+      var y = window.pageYOffset || root.scrollTop || 0;
+      var next = y > 6;
+
+      if (nav && next !== isScrolled) {
+        nav.classList.toggle('is-scrolled', next);
+        isScrolled = next;
+      }
+
+      if (bar) {
+        bar.style.transform = 'scaleX(' + (maxScroll > 0 ? Math.min(y / maxScroll, 1) : 0) + ')';
+      }
+
+      ticking = false;
+    }
+
+    measure();
+    window.addEventListener('resize', measure, { passive: true });
+    window.addEventListener('load', measure);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(onScroll);
+      }
+    }, { passive: true });
+
+    onScroll();
+
+    var year = document.getElementById('year');
+    if (year) year.textContent = new Date().getFullYear();
+
+    /* hide reveal targets only once the observer is running */
+    /* light / dark toggle, remembered between visits */
+    var toggle = document.getElementById('themeToggle');
+
+    function setTheme(theme, persist) {
+      root.setAttribute('data-theme', theme);
+      if (toggle) {
+        var isDark = theme === 'dark';
+        toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+        toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+      }
+      if (persist) {
+        try { localStorage.setItem('cd-theme', theme); } catch (e) {}
+      }
+    }
+
+    if (toggle) {
+      setTheme(root.getAttribute('data-theme') || 'light', false);
+      toggle.addEventListener('click', function () {
+        setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark', true);
+      });
+    }
+
+    root.classList.add('reveal-ready');
+  })();
+</script>
 
 </body>
 </html>
